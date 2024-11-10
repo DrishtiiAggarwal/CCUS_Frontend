@@ -27,7 +27,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="sticky top-0 h-10 z-10 bg-[#020817] py-9 px-4 text-2xl text-white flex justify-between items-center">
+      <div className="sticky top-0 h-10 z-10 bg-[#111315] py-10 px-4 text-2xl text-gray-300 flex justify-between items-center">
         <div className="flex items-center">
           <Image src={logo} alt="logo" height={30} width={30} className="mr-3" />
           <span>CCUS</span>
@@ -63,7 +63,7 @@ function Navbar() {
       >
         <div className="h-screen px-5">
           <div className="flex pt-5 text-2xl justify-between">
-            <div className="flex items-center text-white">
+            <div className="flex items-center text-gray-300">
               <Image src={logo} alt="logo" height={30} width={30} className="mr-3" />
               <span>CCUS</span>
             </div>
@@ -72,7 +72,7 @@ function Navbar() {
               sx={{ color: "white", width: "30px", height: "30px" }}
             />
           </div>
-          <div className="text-white mt-10">
+          <div className=" text-gray-300 mt-10">
             {links.map((element, index) => (
               <div
                 key={index}

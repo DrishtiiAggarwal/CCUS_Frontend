@@ -89,7 +89,7 @@ function Leaderboard() {
     <div className="mx-auto px-20 py-5">
       <div className="text-center text-white text-3xl my-5">Leader Board</div>
       
-      <div className="bg-[#1A1D24] rounded-lg overflow-hidden">
+      <div className="bg-[#1A1D1F] rounded-lg overflow-hidden">
         <div className="grid grid-cols-4 text-center text-sm text-gray-400 px-4 py-2 border-b border-gray-800">
           <div>Place</div>
           <div>Country</div>

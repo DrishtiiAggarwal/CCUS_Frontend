@@ -188,7 +188,7 @@ function LineChart({
   return (
     <div className="chart-container ">
       <div className="flex justify-between">
-        <div className="text-lg max-xl:text-center w-full font-bold text-white capitalize">{title}</div>
+        <div className="text-lg max-xl:text-center w-full font-bold text-gray-300 capitalize">{title}</div>
       </div>
       <Line
         data={chartDataGraph}
