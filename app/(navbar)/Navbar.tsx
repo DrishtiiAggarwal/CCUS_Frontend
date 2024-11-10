@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import logo from "@/assets/images/logo.webp";
+import logo from "@/assets/images/logo.jpg";
 import { useRouter, usePathname } from "next/navigation";
 import { Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
