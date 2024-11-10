@@ -28,7 +28,6 @@ type GraphData = {
 
 function Leaderboard() {
   const [loading, setLoading] = useState(false);
-  const [ccusData, setCcusData] = useState<ccusType[]>([]);
   const [countryVsA_Capacity, setCountryVsA_Capacity] = useState<GraphData[]>([]);
   const [countryVsProjects, setCountryVsProjects] = useState<GraphData[]>([]);
 
@@ -37,10 +36,7 @@ function Leaderboard() {
       setLoading(true);
       try {
         const result: ccusType[] = await getCCUSData();
-        setCcusData(result);
-
-        const filterNonA_Cap = ccusData.filter((element) => element.a_capacity !== null);
-
+        const filterNonA_Cap = result.filter((element) => element.a_capacity !== null);
         const countryVsA_Cap = Object.entries(
           filterNonA_Cap.reduce((acc: Record<string, number>, project) => {
             project.country
@@ -58,9 +54,8 @@ function Leaderboard() {
 
         const sortedCountryVsA_Cap = countryVsA_Cap.sort((a, b) => b.data_count - a.data_count);
         setCountryVsA_Capacity(sortedCountryVsA_Cap);
-
         const projectsPerCountry = Object.entries(
-          ccusData.reduce((acc: Record<string, number>, project: ccusType) => {
+          result.reduce((acc: Record<string, number>, project: ccusType) => {
             project.country
               .split(",")
               .map((country) => country.trim())
@@ -73,7 +68,6 @@ function Leaderboard() {
           data: country,
           data_count: projectCount,
         }));
-
         setCountryVsProjects(projectsPerCountry);
         setLoading(false);
       } catch (error) {
@@ -88,7 +82,6 @@ function Leaderboard() {
   return (
     <div className="mx-auto px-20 py-5">
       <div className="text-center text-white text-3xl my-5">Leader Board</div>
-      
       <div className="bg-[#1A1D1F] rounded-lg overflow-hidden">
         <div className="grid grid-cols-4 text-center text-sm text-gray-400 px-4 py-2 border-b border-gray-800">
           <div>Place</div>
@@ -96,7 +89,7 @@ function Leaderboard() {
           <div>Announced Capacity Of CO2 Per Year</div>
           <div>Number Of Projects</div>
         </div>
-        {loading?<>{[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map((entry, index) => {
+        {loading?<>{[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map((index) => {
           return (
             <div
               key={index}
