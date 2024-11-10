@@ -39,7 +39,7 @@ function Leaderboard() {
         const result: ccusType[] = await getCCUSData();
         setCcusData(result);
 
-        const filterNonA_Cap = result.filter((element) => element.a_capacity !== null);
+        const filterNonA_Cap = ccusData.filter((element) => element.a_capacity !== null);
 
         const countryVsA_Cap = Object.entries(
           filterNonA_Cap.reduce((acc: Record<string, number>, project) => {
@@ -60,7 +60,7 @@ function Leaderboard() {
         setCountryVsA_Capacity(sortedCountryVsA_Cap);
 
         const projectsPerCountry = Object.entries(
-          result.reduce((acc: Record<string, number>, project: ccusType) => {
+          ccusData.reduce((acc: Record<string, number>, project: ccusType) => {
             project.country
               .split(",")
               .map((country) => country.trim())
