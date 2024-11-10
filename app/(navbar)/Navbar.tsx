@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import logo from "@/assets/images/logo.jpg";
+import logo from "@/assets/images/logo.png";
 import { useRouter, usePathname } from "next/navigation";
 import { Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -29,8 +29,7 @@ function Navbar() {
     <>
       <div className="sticky top-0 h-10 z-10 bg-[#111315] py-10 px-4 text-2xl text-gray-300 flex justify-between items-center">
         <div className="flex items-center">
-          <Image src={logo} alt="logo" height={30} width={30} className="mr-3" />
-          <span>CCUS</span>
+          <Image src={logo} alt="logo" height={30} width={30} className="ml-3" />
         </div>
         <div className="flex max-sm:hidden">
           {links.map((element, index) => (
@@ -65,7 +64,9 @@ function Navbar() {
           <div className="flex pt-5 text-2xl justify-between">
             <div className="flex items-center text-gray-300">
               <Image src={logo} alt="logo" height={30} width={30} className="mr-3" />
-              <span>CCUS</span>
+              <span>CCUS 
+                
+              </span>
             </div>
             <Close
               onClick={() => setOpen(false)}

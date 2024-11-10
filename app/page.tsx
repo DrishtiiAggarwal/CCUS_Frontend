@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 //import world from "@/assets/images/world_map.png"
 import ccus_2 from "@/assets/images/ccus_2.jpg"
