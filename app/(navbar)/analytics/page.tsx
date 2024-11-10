@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
-import { CategoryScale, elements } from "chart.js";
+import { CategoryScale } from "chart.js";
 import LineChart from "./LineChart";
 import PieChart from "./PieChart";
 import { getCCUSData } from "@/app/actions/api";
@@ -194,23 +194,6 @@ function Analytics() {
               <PieChart chartData={regionPie} title={`Region `} />
             </div>
           )}
-          {/* {!loading && (
-            <div className="p-5 shadow-md w-full xl:h-[45vh]  border rounded-xl max-lg:p-0">
-              <LineChart theme="cyan" chartData={profitData} title={`Profit Per `} />
-            </div>
-          )} */}
-
-          {/* {loading && (
-            <div className="p-5 animate-pulse shadow-md w-full xl:h-[45vh] border flex flex-col gap-y-5 py-6 rounded-xl max-lg:p-0">
-              <div className="w-36 h-5 rounded-2xl bg-gray-200"></div>
-              <div className="w-full h-full bg-gray-200 rounded-md"></div>
-            </div>
-          )}
-          {!loading && (
-            <div className="p-5 shadow-md w-full xl:h-[45vh]  border rounded-xl max-lg:p-0">
-              <LineChart theme="red" chartData={breakfastData} title={`Breakfast Served Per`} />
-            </div>
-          )} */}
         </div>
       </div>
     </div>

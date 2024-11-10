@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
@@ -183,28 +183,6 @@ function LineChart({
         tension: 0.3, 
       },
     ],
-  };
-
-  const chartOptions = {
-    plugins: {
-      legend: {
-        labels: {
-          color: "white", // Legend label color
-        },
-      },
-    },
-    scales: {
-      x: {
-        ticks: {
-          color: "white", // X-axis label color
-        },
-      },
-      y: {
-        ticks: {
-          color: "white", // Y-axis label color
-        },
-      },
-    },
   };
 
   return (
