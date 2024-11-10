@@ -64,7 +64,9 @@ function Navbar() {
           <div className="flex pt-5 text-2xl justify-between">
             <div className="flex items-center text-gray-300">
               <Image src={logo} alt="logo" height={30} width={30} className="mr-3" />
-              <span>CCUS</span>
+              <span>CCUS 
+                
+              </span>
             </div>
             <Close
               onClick={() => setOpen(false)}
